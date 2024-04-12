@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<ngx-spinner
+  bdColor="rgba(0,0,0,0.8)"
+  size="default"
+  color="#000"
+  type="ball-beat"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p></ngx-spinner
+>

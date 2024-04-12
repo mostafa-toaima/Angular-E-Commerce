@@ -1,0 +1,26 @@
+nav {
+  background: linear-gradient(to right, rgb(48, 71, 133), rgb(80, 16, 16));
+  color: #fff;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      width: 25%;
+      margin: 0;
+
+      li {
+        cursor: pointer;
+        font-size: 22px;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+h1 {
+  font-size: 45px;
+  margin-top: 20px;
+
+}
+nav {
+  background-color: black;
+  width: 100% !important;
+}
+.login {
+  position: absolute;
+  inset: 0;
+
+  .log a {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    margin-left: 6px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .box {
+    z-index: 5;
+    padding: 30px 15px;
+    border: 1px solid #ddd;
+    width: 83% !important;
+    border-radius: 15px;
+    background-color: #f0f3f2;
+    box-shadow: 0px 2px 5px rgba(202, 37, 16, 0.3);
+
+    h2 {
+      color: #bc1059;
+    }
+
+    button {
+      padding: 5px;
+      margin: 2px;
+    }
+    .loginb {
+      padding: 5px 46px;
+      margin: 10px;
+      background-color: #0aad0a ;
+      &:disabled {
+          background-color: #eee;
+    }
+    &:hover{
+      padding:5px 55px ;
+    }
+    }
+    .switch {
+      color: #0aad0a;
+      &:hover {
+          color: #063806;
+        }
+    }
+  }
+}
+
+// /* Media Query for smaller screens */
+// @media only screen and (max-width: 600px) {
+//   .login .box {
+//     width: 83% !important;
+//   }
+// }
+
+// /* Media Query for larger screens */
+// @media only screen and (min-width: 601px) {
+//   .login .box {
+//     width: 83% !important;
+//   }
+// }

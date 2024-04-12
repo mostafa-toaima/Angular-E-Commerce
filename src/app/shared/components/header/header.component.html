@@ -1,0 +1,40 @@
+<nav *ngIf="isAuth">
+  <div class="container">
+    <div class="content">
+      <h2 class="logo">Market</h2>
+      <ul class="navbar">
+        <li routerLink="/products">Products</li>
+        <li routerLink="/cart">Carts</li>
+        <button style="cursor: pointer;" class="btn btn-danger" (click)="onLogOut()">Logout</button>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Recipe Book</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" *ngIf="isAuth">
+          <a routerLink="/recipes">Recipes</a>
+        </li>
+        <li routerLinkActive="active" *ngIf="!isAuth">
+          <a routerLink="/auth">Authenticate</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/shopping-list">Shopping List</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="isAuth">
+          <a style="cursor: pointer;">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+

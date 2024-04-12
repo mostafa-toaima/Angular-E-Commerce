@@ -1,0 +1,113 @@
+<div class="container">
+
+      <!-- <div class="alert alert-danger" *ngIf="error">
+      <p>{{ error }}</p>
+    </div> -->
+      <h1 class="fw-bold">*mt</h1>
+      <app-alert
+        [message]="error"
+        *ngIf="error"
+        (close)="handelError()"
+      ></app-alert>
+      <div *ngIf="isLoading" style="text-align: center"></div>
+      <div
+        class="login d-flex justify-content-center align-items-center m-auto"
+        *ngIf="!isLoading"
+      >
+        <div class="row">
+          <!-- <div class="log text-center">
+            <h1 class="fw-bold">
+              {{ isLoginMode ? "Login :" : "Sign Up :" }}
+            </h1>
+            <div class="d-flex justify-content-center text-align-items-center">
+              <p>
+                {{
+                  isLoginMode
+                    ? "Don't have an account ? "
+                    : "Already have an account ? "
+                }}
+              </p>
+              <a (click)="onSwitchMode()">{{
+                isLoginMode ? "Sign Up" : "Login"
+              }}</a>
+            </div>
+          </div> -->
+          <div class="col-md-12 col-lg-12">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+              <div class="box w-100 text-center">
+                <h1 class="fw-bold">{{ isLoginMode ? "Login :" : "Sign Up :" }}</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <mat-form-field
+                    *ngIf="!isLoginMode"
+                    appearance="outline"
+                    class="w-100 mb-2 mt-2"
+                  >
+                    <mat-label>First Name</mat-label>
+                    <input
+                      matInput
+                      formControlName="fName"
+                      placeholder="first name"
+                    />
+                    <mat-error>Enter the first name</mat-error>
+                  </mat-form-field>
+                  <mat-form-field
+                    *ngIf="!isLoginMode"
+                    appearance="outline"
+                    class="w-100 mb-2 mt-2"
+                  >
+                    <mat-label>Last Name</mat-label>
+                    <input
+                      matInput
+                      formControlName="lName"
+                      placeholder="lname"
+                    />
+                    <mat-error>Enter the last name</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="w-100 mb-2 mt-2">
+                    <mat-label>Email</mat-label>
+                    <input
+                      matInput
+                      formControlName="email"
+                      placeholder="email"
+                    />
+                    <mat-error>required</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input
+                      matInput
+                      formControlName="password"
+                      type="password"
+                      placeholder="password"
+                    />
+                    <mat-error>required</mat-error>
+                  </mat-form-field>
+                </form>
+                <div class="d-flex justify-content-center">
+                  <button
+                    class="btn loginb me-2"
+                    type="submit"
+                    [disabled]="!loginForm.valid"
+                    style="cursor: pointer"
+                    (click)="onSubmit()"
+                  >
+                    {{ isLoginMode ? "Login" : "Sign Up" }}
+                  </button>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button
+                    style="cursor: pointer"
+                    class="btn switch ms-2"
+                    type="button"
+                    (click)="onSwitchMode()"
+                  >
+                    Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
